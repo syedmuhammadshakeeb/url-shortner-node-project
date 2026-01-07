@@ -9,8 +9,8 @@ async function handleGenerateShortURL(req, res) {
         redirectUrl: body.URL,
         visitHistory: []
     })
-
-    return res.json({ shortId: shortId });
+    return res.render('home', { shortId: shortId });
+    // return res.json({ shortId: shortId });
 };
 
 async function handleAnatlytics(req, res) {
